@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniela Gross</title>
+
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+        }
+
+        h3{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        div{            
+            background-color: rgba(78, 78, 78, 0.89);
+            border-radius: 15px;
+            padding: 15px;
+            display:flex;
+        }
+
+        .head{
+            position: fixed;
+            width: 98%;
+            height: 114px;
+            top: 0;
+        }
+
+        .left-menu{
+            position: fixed;
+            width: 10%;
+            height: 300px;
+            top: 155px;
+        }
+
+        .container{
+            width: 71%;
+            height: 300px;
+            margin-left: 13%;
+            margin-top: 155px;
+            flex-direction: column;
+            max-height: 300px;
+            overflow: auto;
+        }
+
+        .right-menu{
+            width: 10%;
+            height: 300px;
+            position: fixed;
+            margin-left: 88%;
+            top: 155px;
+        }
+
+        .conteudo{
+            width: 97%;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="head">
+        <h3>Header</h3>
+    </div>
+
+    <div class="left-menu">
+        <h3>Left Menu</h3>
+    </div>
+    
+    <div class="right-menu">
+        <h3>Right Menu</h3>
+    </div>
+    
+    <div class="container">
+        <div class="conteudo">
+           <h3>Container</h3> 
+        </div>
+
+        <div class="conteudo">
+            <h3>Container</h3> 
+         </div>
+
+         <div class="conteudo">
+            <h3>Container</h3> 
+         </div>
+         <div class="conteudo">
+            <h3>Container</h3> 
+         </div>
+        
+    </div>
+    
+</body>
+</html>
