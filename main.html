@@ -1,101 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniela Gross</title>
+    <link rel="icon" href="favicon.png">
+
 
     <style>
-        body{
+        body {
             background-color: black;
-            margin: 0;
+            margin: 0px;
+            padding: 0px;
         }
 
-        h3{
+        h3,
+        h5 {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: white;
+            display: flex;
         }
 
-        div{            
-            background-color: rgba(78, 78, 78, 0.89);
+        article,
+        nav,
+        aside,
+        section,
+        footer,
+        header {
+            background-color: rgba(78, 78, 78, 0.781);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 15px;
-            padding: 15px;
-            display:flex;
-        }
-
-        .head{
-            position: fixed;
-            width: 98%;
-            height: 114px;
-            top: 0;
-        }
-
-        .left-menu{
-            position: fixed;
-            width: 10%;
-            height: 300px;
-            top: 155px;
-        }
-
-        .container{
-            width: 71%;
-            height: 300px;
-            margin-left: 13%;
-            margin-top: 155px;
             flex-direction: column;
-            max-height: 300px;
-            overflow: auto;
         }
 
-        .right-menu{
-            width: 10%;
-            height: 300px;
-            position: fixed;
-            margin-left: 88%;
-            top: 155px;
-        }
-
-        .conteudo{
-            width: 97%;
-            height: 100px;
+        header {
+            width: 100%;
+            height: 80px;
+            top: 0;
             margin-bottom: 5px;
         }
 
+        .f {
+            position: fixed;
+        }
+
+        .r {
+            position: relative;
+        }
+
+        nav {
+            position: fixed;
+            width: 10%;
+            height: 70%;
+            top: 120px;
+        }
+
+        section {
+            padding: 10px;
+            width: 70%;
+            height: 70%;
+            margin-top: 120px;
+            margin-left: 15%;
+            flex-direction: column;
+            max-height: 70%;
+            overflow: auto;
+            border-radius: 15px;
+        }
+
+        aside {
+            position: fixed;
+            width: 10%;
+            height: 70%;
+            left: 90%;
+            top: 120px;
+        }
+
+        article {
+            width: 97%;
+            height: 500px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            width: 100%;
+            top: 94%;
+        }
     </style>
 
+    <script>
+        function renderImg(element) {
+            for (var i = 0; i < 6; i++) {
+                var newEl = document.createElement('h5');
+                newEl.innerHTML = `<img src="https://luxedentalfl.com/wp-content/uploads/2022/02/right-quote-sign-1.png" alt="" srcset="" width="20px" />`;
+                element.appendChild(newEl);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var nav = document.getElementById('nav');
+            var aside = document.getElementById('aside');
+            var article = document.getElementById('article');
+            const element = [nav, aside, article];
+
+            for (var i = 0; i < 3; i++) {
+                renderImg(element[i]);
+            }
+
+        });
+    </script>
+
 </head>
+
 <body>
 
-    <div class="head">
+    <header class="f">
         <h3>Header</h3>
-    </div>
+    </header>
 
-    <div class="left-menu">
-        <h3>Left Menu</h3>
-    </div>
-    
-    <div class="right-menu">
-        <h3>Right Menu</h3>
-    </div>
-    
-    <div class="container">
-        <div class="conteudo">
-           <h3>Container</h3> 
-        </div>
+    <nav id="nav">
+        <h3>Nav</h3>
+    </nav>
 
-        <div class="conteudo">
-            <h3>Container</h3> 
-         </div>
+    <aside id="aside">
+        <h3>Aside</h3>
+    </aside>
 
-         <div class="conteudo">
-            <h3>Container</h3> 
-         </div>
-         <div class="conteudo">
-            <h3>Container</h3> 
-         </div>
-        
-    </div>
-    
+    <section>
+        <h3>Section</h3>
+
+        <header class="r">
+            <h3>Header</h3>
+        </header>
+
+        <article id="article">
+            <h5>Article</h5>
+        </article>
+
+        <footer class="r">
+            <h3>Footer</h3>
+        </footer>
+    </section>
+
+    <footer class="f">
+        <h3>Footer</h3>
+    </footer>
+
 </body>
+
 </html>
